@@ -5,3 +5,38 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+body{
+font-family: 'Roboto Slab', serif;
+}
+h1, h2, h3, h4, p{
+  margin: 0;
+  padding: 0;
+}
+.page-main{
+  background-image: linear-gradient(-60.0deg, #54b7a1 1%, #426384 112140136%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo{
+    background-image: url(../img/Logo.svg);
+    display: block;
+    width: 137px;
+    height: 28px;
+  }
+  &-list{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    &__item{
+      margin-left: 15px;
+    }
+  }
+}
+.btn-menu{
+  display: none;
+}
