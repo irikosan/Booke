@@ -8,6 +8,9 @@
 
 $light-color:#fff;
 $accent-color: #65e496;
+$bg-light-color:#f5f6fa;
+$bg-dark-color:#44444f;
+
 
 body{
 font-family: 'Roboto Slab', serif;
@@ -75,7 +78,7 @@ a{
     }
   }
 }
-/*PAGE*/
+/*PAGE-MAIN*/
 .block-book{
   display: flex;
   justify-content: space-between;
@@ -136,5 +139,132 @@ a{
     background-color: $accent-color;
     margin: 30px 0;
     padding-top: 20px;
+  }
+}
+/*PAGE*/
+.block-author{
+  display: flex;
+  justify-content: space-between;
+  padding: 160px 0 50px;
+}
+.block-ava{
+  position: relative;
+  &__svg{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
+  &__img{
+  margin: 40px 40px;
+  }
+}
+.block-counter{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 149px;
+  p{
+    font-size: 18px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #696980;
+    text-align: center;
+    span{
+      display: block;
+      background-image: linear-gradient(-90.0deg);
+      font-family: 'Roboto Slab', serif;
+      font-size: 80px;
+      line-height: 44px;
+      font-weight: 100;
+      letter-spacing: 0.04em;
+      color: $accent-color;
+      text-align: center;
+      padding-bottom: 32px;
+    }
+  }
+}
+.page{
+  padding-top: 156px;
+  &_grey{
+    background-color:$bg-light-color;
+    h2{
+      font-size: 48px;
+      line-height: 44px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #44444f;
+      text-align: center;
+    }
+  }
+  &-subtitle{
+    font-size: 18px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $accent-color;
+    text-align: center;
+  }
+}
+.block_about{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+  &-text{
+    flex-basis: 40%;
+    h3{
+      padding-bottom: 29px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: $bg-dark-color
+    }
+    p{
+      font-family: 'Open Sans', serif;
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: $bg-dark-color;
+    }
+  }
+  &-table{
+    flex-basis: 50%;
+    h3{
+      padding-bottom: 29px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: $bg-dark-color;
+    }
+  }
+  &-list{
+    margin: 0;
+    padding:0;
+    counter-reset: list;
+    column-count: 2;
+    li{
+      position: relative;
+      padding-left: 33px;
+      counter-increment: list;
+      list-style: none;
+      padding-bottom: 15px;
+      &::before{
+        content: counter(list) ". ";
+      }
+      &::after{
+        content: "+";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 19px);
+        background-color: $accent-color;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+        color: $light-color;
+        padding: 0 7px;
+      }
+    }
   }
 }
