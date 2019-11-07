@@ -188,6 +188,9 @@ a{
   display: flex;
   justify-content: space-around;
   margin: 70px 0 70px;
+  @media(max-width:991px){
+    margin: 130px 0 0;
+  }
   p{
     font-size: 18px;
     line-height: 44px;
@@ -195,6 +198,9 @@ a{
     letter-spacing: 0.04em;
     color: #696980;
     text-align: center;
+    @media(max-width:991px){
+      margin-bottom: 75px;
+    }
     span{
       display: block;
       background-image: linear-gradient(-90.0deg);
@@ -235,8 +241,21 @@ a{
   display: flex;
   justify-content: space-between;
   padding: 90px 0;
+  @media(max-width: 1095px){
+      justify-content: flex-start;
+    }
+  @media(max-width:991px) {
+    flex-direction: column;
+  }  
   &-text{
     flex-basis: 40%;
+    @media(max-width:1095px){
+      flex-basis: 42%;
+    }
+    @media(max-width:991px){
+      flex-basis: 40%;
+      padding: 37px 0;
+    }
     h3{
       padding-bottom: 29px;
       font-size: 24px;
@@ -336,30 +355,39 @@ a{
 /*page-other-book*/
 .page-other-book{
   padding: 155px 0 0;
+  @media(max-width:991px){
+    padding: 0 0 100px;
+  }
   h2{
     font-size: 48px;
-line-height: 44px;
-font-weight: 700;
-letter-spacing: 0.04em;
-color: $bg-dark-color;
-text-align:center;
+    line-height: 44px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: $bg-dark-color;
+    text-align:center;
     span{
-display: block;
-font-size: 18px;
-line-height: 44px;
-font-weight: 400;
-letter-spacing: 0.05em;
-color: $accent-color;
-text-transform: none;
+      display: block;
+      font-size: 18px;
+      line-height: 44px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: $accent-color;
+      text-transform: none;
     }
   }
   &__flexbox{
     display: flex;
     justify-content: center;
     padding:86px 0 90px;
+    @media(max-width:991px){
+      flex-direction: column;
+    }
     &-item{
       flex-basis: 30%;
       text-align: center;
+      @media(max-width:991px){
+        margin: 30px 0;
+      }
       &__small{
         background-image: url(../img/book_small.svg);
         width: 269px;
@@ -607,8 +635,16 @@ p{
     display: flex;
     padding: 86px 0 86px;
     justify-content: space-around;
+    @media(max-width:991px){
+      flex-direction: column;
+      padding: 0;
+      text-align: center;
+    }
     .blog-item{
       flex-basis: 30%;
+      @media(max-width:991px){
+        margin-bottom: 70px;
+      }
       h4{
         font-size: 18px;
         line-height: 24px;
@@ -641,6 +677,9 @@ p{
   }
   .align-center{
     margin: 0 auto;  
+    @media(max-width: 991px;){
+      margin: 50px auto 0;
+    }
   }
 }
 /*subscribe*/
